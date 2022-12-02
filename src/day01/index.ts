@@ -1,9 +1,6 @@
-import fs from 'node:fs';
-import path from 'node:path';
+import { loadInput } from '../utils';
 
-const input = fs.readFileSync(path.join(__dirname, 'input.txt')).toString();
-
-const [elf1, elf2, elf3] = input
+const [elf1, elf2, elf3] = loadInput(__dirname, 'input.txt')
   .split('\n\n')
   .map(data =>
     data
