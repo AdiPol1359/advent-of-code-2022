@@ -2,13 +2,13 @@ import { loadInput } from '../utils';
 
 const output = loadInput(__dirname, 'input.txt')
   .split('\n')
-  .reduce((prev, _, i, array) => {
+  .reduce<string[][]>((prev, _, i, array) => {
     if (i % 3 === 0) {
       prev.push([...array].splice(prev.length * 3, 3));
     }
 
     return prev;
-  }, [] as string[][])
+  }, [])
   .reduce((prev, [first, second, third]) => {
     const letter =
       [...first].find(
