@@ -10,5 +10,4 @@ const [elf1, elf2, elf3] = loadInput(__dirname, 'input.txt')
   )
   .sort((a, b) => b - a);
 
-console.log(elf1);
 console.log(elf1 + elf2 + elf3);
